@@ -2,11 +2,20 @@ import { v4 as uuidv4 } from "uuid"; // uuidv4 uuid 이름을 짓겠다
 import styled from "styled-components";
 
 const StyledForm = styled.form`
-  background-color: aqua;
+  margin: 20px;
+
   & input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
   }
-  &:hover {
-    background-color: azure;
+  & button {
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  & button:hover {
+    background-color: #6cd88b;
   }
 `;
 

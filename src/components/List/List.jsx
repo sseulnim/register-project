@@ -2,12 +2,25 @@ import mockData from "./../../mock.json";
 import styled from "styled-components";
 
 const StyledList = styled.div`
-  background-color: blue;
   & div {
-    background-color: yellow;
+    background-color: #b4ffc9;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 5px 30px;
+    display: flex;
+    flex-direction: column;
   }
   & .date {
-    font-size: 40px;
+    font-size: 12px;
+    font-weight: 200;
+    width: 100%;
+  }
+  & .category {
+    font-size: 17px;
+  }
+  & .cost {
+    font-weight: 600;
+    text-align: right;
   }
 `;
 
@@ -20,10 +33,10 @@ const List = (props) => {
         return (
           <div key={item.id}>
             <p className="date">{item.date}</p>
-            <p>
+            <p className="category">
               {item.category}-{item.description}
             </p>
-            <p>{item.cost} 원</p>
+            <p className="cost">{item.cost} 원</p>
           </div>
         );
       })}
